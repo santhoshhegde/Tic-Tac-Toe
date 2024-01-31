@@ -35,10 +35,18 @@ body{
     /* box-shadow: 0 0 0 1rem rgba(240, 0, 0, 0.1); */
 }
 
-#reset{
+#reset,#newGameBtn{
     padding: 1rem;
     font-size: 1.25rem;
     border-radius: 1rem;
     color: #0F7173;
     background: #F05D5E;
+}
+
+#msg{
+    font-size: 2rem;
+}
+
+.hide{
+    display: none;
 }

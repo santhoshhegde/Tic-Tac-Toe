@@ -1,3 +1,7 @@
+:root{
+    --main-color: white;
+    
+}
 body{
     background: #f2cc8f;
     text-align: center;
@@ -27,6 +31,7 @@ body{
     border: none;
     font-size: 8vmin;
     color: #272932;
+    background: var(--main-color);
     /* box-shadow: 0 0 0 1rem rgba(240, 0, 0, 0.1); */
 }
 

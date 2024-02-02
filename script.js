@@ -3,7 +3,9 @@ let isTrunO = true;
 let newGmBtn = document.querySelector("#newGameBtn");
 let resetBtn = document.querySelector("#reset");
 let msgCont = document.querySelector(".msg-conatiner");
+let msgContDraw = document.querySelector(".msg-conatiner-draw");
 let msg = document.querySelector("#msg");
+let count = 0;
 
 let patterns = [[0,1,2],
                 [0,3,6],
@@ -26,13 +28,14 @@ boxes.forEach((box)=>{
             isTrunO = true;
         }
         box.disabled = true;
-
+        count++;
        checkwinners();
     })
 });
 
 showWinner = (winner) => {
     msg.innerText = `Congratulations, winner is ${winner}`;
+    msgCont.classList.remove("hide");
 }
 
 const disableButtons = () => {
@@ -58,8 +61,12 @@ checkwinners = ()=>{
                 if(pos0 == pos1 && pos1==pos2){
                    disableButtons();
                     showWinner(pos0);
-                    msgCont.classList.remove("hide");
                 }
+                else if(count==9) {
+                    msgContDraw.classList.remove("hide");
+                }
+                    
+                
             }
         }
     

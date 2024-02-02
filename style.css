@@ -43,7 +43,7 @@ body{
     background: #F05D5E;
 }
 
-#msg{
+#msg,#msg-draw{
     font-size: 2rem;
 }
 

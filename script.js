@@ -21,10 +21,12 @@ boxes.forEach((box)=>{
     box.addEventListener("click",()=>{
         if(isTrunO){
             box.innerText = "O";
+            box.style.color = 'Red';
             isTrunO = false;
         }
         else{
             box.innerText = "X";
+            box.style.color = 'Black';
             isTrunO = true;
         }
         box.disabled = true;
@@ -61,6 +63,10 @@ checkwinners = ()=>{
                 if(pos0 == pos1 && pos1==pos2){
                    disableButtons();
                     showWinner(pos0);
+                    boxes[pattern[0]].style.background = 'green';
+                    boxes[pattern[1]].style.background = 'green';
+                    boxes[pattern[2]].style.background = 'green';
+
                 }
                 else if(count==9) {
                     msgContDraw.classList.remove("hide");

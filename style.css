@@ -35,7 +35,7 @@ body{
     /* box-shadow: 0 0 0 1rem rgba(240, 0, 0, 0.1); */
 }
 
-#reset,#newGameBtn{
+#reset,#newGameBtn,#newGameBtnDraw{
     padding: 1rem;
     font-size: 1.25rem;
     border-radius: 1rem;

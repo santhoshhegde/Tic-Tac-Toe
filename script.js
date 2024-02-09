@@ -38,6 +38,9 @@ boxes.forEach((box)=>{
        if(count>=9 && isWinner===false) {
         msgContDraw.classList.remove("hide");
         isWinner = true;
+        console.log(count)
+        count=0;
+        console.log(count, msgContDraw.classList)
     }
     })
 });
@@ -45,7 +48,8 @@ boxes.forEach((box)=>{
 const showWinner = (winner) => {
     msg.innerText = `Congratulations, winner is ${winner}`;
     msgCont.classList.remove("hide");
-    isWinner = true;
+    isWinner = false;
+    count =0;
     // line.classList.remove("hide");
 }
 
@@ -72,14 +76,7 @@ checkwinners = ()=>{
                 if(pos0 == pos1 && pos1==pos2){
                    disableButtons();
                     showWinner(pos0);
-                    boxes[pattern[0]].style.background = 'green';
-                    boxes[pattern[1]].style.background = 'green';
-                    boxes[pattern[2]].style.background = 'green';
-
                 }   
-else if(count==9) {
-                    msgContDraw.classList.remove("hide");
-                }
                     
                 
             }
